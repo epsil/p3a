@@ -60,7 +60,7 @@ det opp til den enkelte å vurdere, men et kjapt overblikk over
 markedet levner ingen tvil om at lydforsterkning er *big business*.
 
 Mot denne bakgrunnen presenterer vi et forsterkerdesign som er 20 år
-gammelt og forbausende enkelt. Rod Elliots *Project 3A* (fork. *P3A*)
+gammelt og forbausende enkelt. Rod Elliotts *Project 3A* (fork. *P3A*)
 gir høy ytelse ved lave kostnader, er velutprøvd og er lett å bygge.
 Det er et ideelt design for nybegynneren, men kan også anbefales til
 den kresne *hi-fi*-entusiasten. Designet bygger videre på det
@@ -281,7 +281,7 @@ Kretsskjema
 ![](https://raw.github.com/epsil/p3a/master/fig/kretsskjema.png)
 
 Kretsskjema fra Multisim. For det opprinnelige kretsskjemaet til Rod
-Elliot, se kretsanalysen. For et modifisert skjema som viser hvordan
+Elliott, se kretsanalysen. For et modifisert skjema som viser hvordan
 kretsen ble etter egne justeringer, se modifikasjonene.
 
 Kretsanalyse
@@ -524,7 +524,7 @@ trinn med utgangspunkt i inngangsimpedansen til senere trinn.
 
 ![](https://raw.github.com/epsil/p3a/master/fig/p3a.png)
 
-Det opprinnelige kretsskjemaet for forsterken, etter Rod Elliot.
+Det opprinnelige kretsskjemaet for forsterken, etter Rod Elliott.
 Komponenter markert med `*` er utelatt fra kretskortet.
 
 ### Utgangstransistorene
@@ -607,12 +607,12 @@ forsterkningen til Sziklai-koblingen av `Q_5` og `Q_7`. Ved hjelp av
 noen avrundinger kan vi gjøre uttrykket for denne forsterkningen en
 hel del enklere:
 
-                             R_11            R_11 β_5 β_7
+                          R_11               R_11 β_5 β_7
     β_57 = (β_5 + 1) + ----------- β_5 β_7 = ------------ + β_5 + 1
                        R_11 + r_π7           R_11 + r_π7
 
                β_5 β_7
-         ≈ --------------- + β_5 + 1 ≈ β_5 β_7 + β_5 + 1   ettersom r_π7  << R_11
+         ≈ --------------- + β_5 + 1 ≈ β_5 β_7 + β_5 + 1   ettersom r_π7 << R_11
            1 + r_π7 / R_11
 
          ≈ β_5 β_7 + β_5 = β_5 (β_7 + 1)
@@ -665,14 +665,14 @@ nevnte trinns forsterkning, `A_u`.
 
 ![](https://raw.github.com/epsil/p3a/master/fig/p3a-f2.png)
 
-`Q_4` er koblet til en *`v_BE`-multiplikator* som sørger for en
-konstant DC-spenning mellom `Q_5` og `Q_6`, og som utgjøres av
-transistoren `Q_9`, motstanden `R_16` og potensiometeret `VR_1`.
-Multiplikatoren kan erstattes med en konstant spenningskilde, som i
-småsignalskjemaet erstattes med en kortslutning. Således får vi
-kollektoren til `Q_4` koblet til en parallellkobling av `Q_5`, `Q_6`
-og *bootstrap*-motstanden `R_9`. Vi ser bort fra kondensatoren `C_4`,
-som er en koblingskondensator som fjerner «parasitt»-oscillasjoner.
+`Q_4` er koblet til en `v_BE`-multiplikator som sørger for en konstant
+DC-spenning mellom `Q_5` og `Q_6`, og som utgjøres av transistoren
+`Q_9`, motstanden `R_16` og potensiometeret `VR_1`. Multiplikatoren
+kan erstattes med en konstant spenningskilde, som i småsignalskjemaet
+erstattes med en kortslutning. Således får vi kollektoren til `Q_4`
+koblet til en parallellkobling av `Q_5`, `Q_6` og
+*bootstrap*-motstanden `R_9`. Vi ser bort fra kondensatoren `C_4`, som
+er en koblingskondensator som fjerner «parasitt»-oscillasjoner.
 
 ![](https://raw.github.com/epsil/p3a/master/fig/driver.png)
 
@@ -893,7 +893,7 @@ Tilbakekoblingsfaktoren, som vi kaller `β`, blir dermed
 
 For å bestemme kretsens *DC*-egenskaper tar vi utgangspunkt i
 *hvilestrømmen* gjennom motstandene `R_13` og `R_14`. Den stilles inn
-med potensiometeret `VR_1` og bør ifølge Rod Elliot ligge på ca. 75
+med potensiometeret `VR_1` og bør ifølge Rod Elliott ligge på ca. 75
 mA, som svarer til 50 mV over `R_13` og `R_14`.
 
 Vi kaller denne strømmen `I_Q` (for *quiescent current*). (Ettersom
@@ -1434,7 +1434,7 @@ Trimming
 Første gang man skal starte opp forsterkeren, anbefales det at man
 gjør det med en *ekstern* spenningskilde med strømbegrensning. Ved
 feil kan en ekstern kilde kuttes, mens den interne strømforsyningen
-har ingen slik sikkerhet pga.glattekondensatorene.
+har ingen slik sikkerhet pga. glattekondensatorene.
 
 ![](https://raw.github.com/epsil/p3a/master/fig/vr1.jpg)
 
@@ -1445,7 +1445,7 @@ plutselig skulle begynne å stige, er noe galt - skru av spenningskilden
 og feilsøk kretsen.
 
 Når påtrykksspenningen er på ±35 V, justeres *hvilestrømmen* gjennom
-`R_13` og `R_14` ved å stille på potensiometeret. Ifølge Rod Elliot
+`R_13` og `R_14` ved å stille på potensiometeret. Ifølge Rod Elliott
 bør strømmen gjennom motstandene ligge på 75 mA, som svarer til et
 spenningsfall på 50 mV:
 
@@ -1514,7 +1514,7 @@ Komponentliste
     Rød lysdiode
     ---------------------------------
 
-> \* Merk at fargen på lysdioden er avgjørende. Som Rod Elliot sier
+> \* Merk at fargen på lysdioden er avgjørende. Som Rod Elliott sier
 > det: «This is not for appearance (although the green LED looks
 > pretty neat on the board), but for the voltage drop - different
 > coloured LEDs have a slightly different voltage drop.»
