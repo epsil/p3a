@@ -1,18 +1,19 @@
 Rapport for konstruksjon av den 60 W klasse AB-forsterkeren
 *Project 3A*: enkelt design og god lydkvalitet.
-**[PDF-utgave](https://raw.github.com/epsil/p3a/master/rapport.pdf)**.
+**[HTML-utgave](http://epsil.github.io/p3a/)**,
+**[PDF-utgave](https://github.com/epsil/p3a/raw/master/rapport.pdf)**.
 
-----
+* * * * *
 
 Lydforsterker: *Project 3A*
 ===========================
 
-![](https://raw.github.com/epsil/p3a/master/fig/hist-logo.png)
+![](fig/hist-logo.png)
 
 Stian Rishaug, Bastian S. Solem, Aleksander Uthus og Vegard Øye.
 Veileder: Herman Ranes.
 
-----
+* * * * *
 
 ### Sammendrag
 
@@ -96,9 +97,9 @@ oppbygning og virkemåte, se kretsanalysen.)
 Simulering
 ----------
 
-![](https://raw.github.com/epsil/p3a/master/fig/magnitude.png)
+![](fig/magnitude.png)
 
-![](https://raw.github.com/epsil/p3a/master/fig/fasemargin.png)
+![](fig/fasemargin.png)
 
 Bode-diagrammet viser at forsterkeres maksimale båndbredde ligger fra
 1/2 Hz til ca. 500 kHz. Den originale kretsen ville normalt gått mye
@@ -106,9 +107,9 @@ høyere, men siden vi har *modifisert* kretsen noe ved å koble 368 pF
 kondensatorer i parallell med `C_4` og `C_6` (se modifikasjonene for
 detaljer), blir de flaskehalsen i kretsen.
 
-![](https://raw.github.com/epsil/p3a/master/fig/magnitude20-20kHz.png)
+![](fig/magnitude20-20kHz.png)
 
-![](https://raw.github.com/epsil/p3a/master/fig/fasemargin20-20kHz.png)
+![](fig/fasemargin20-20kHz.png)
 
 Det lydmessig interessante området ligger fra 20 Hz til 20 kHz
 (hi-fi), og av utsnittet ser vi at dette området ligger ganske flatt.
@@ -149,12 +150,12 @@ og for tap `Δv_o = 2,5 mV`.
 For å finne utgangsimpedansen, la oss betrakte en skjematisk
 fremstilling av forsterkeren uten last:
 
-![](https://raw.github.com/epsil/p3a/master/fig/uimp1.png)
+![](fig/uimp1.png)
 
 Ettersom det ikke går noen strøm i forsterkeren, er spenningsfallet over
 utgangsimpedansen, `R_o`, lik null, og vi har `v_o = A v_i`. Med last:
 
-![](https://raw.github.com/epsil/p3a/master/fig/uimp2.png)
+![](fig/uimp2.png)
 
 Her har vi følgende spenningsdeling over `R_o` og `R_L`:
 
@@ -229,7 +230,7 @@ For å beregne klirr har man følgende formel:
 
 Vi målte klirr ved å koble opp og måle som vist på figuren:
 
-![](https://raw.github.com/epsil/p3a/master/fig/klirr.png)
+![](fig/klirr.png)
 
 Vi målte en klirrfaktor på 0,015 % ved 1 W og 1 kHz.
 
@@ -278,7 +279,7 @@ hvor vi ser bort fra akustikk i vegger.
 Kretsskjema
 ===========
 
-![](https://raw.github.com/epsil/p3a/master/fig/kretsskjema.png)
+![](fig/kretsskjema.png)
 
 Kretsskjema fra Multisim. For det opprinnelige kretsskjemaet til Rod
 Elliott, se kretsanalysen. For et modifisert skjema som viser hvordan
@@ -322,8 +323,8 @@ emitterstrømmen lik summen av base- og kollektorstrømmen, dvs.
 emitterutgangen som indikerer strømretningen og dermed også
 transistortypen.
 
-> ![](https://raw.github.com/epsil/p3a/master/fig/npn.png)
-> ![](https://raw.github.com/epsil/p3a/master/fig/pnp.png)
+> ![](fig/npn.png)
+> ![](fig/pnp.png)
 >
 > NPN- og PNP-transistorer i det aktive området.
 
@@ -411,8 +412,8 @@ og *T-modellen*. Disse modellene inneholder en styrt strømkilde som
 tilsvarer strømforsterkningen (`β`), samt en inngangsmotstand enten på
 basen (`r_π`) eller emitteren (`r_e`).
 
-> ![](https://raw.github.com/epsil/p3a/master/fig/hybridpimodell.png)
-> ![](https://raw.github.com/epsil/p3a/master/fig/tmodell.png)
+> ![](fig/hybridpimodell.png)
+> ![](fig/tmodell.png)
 >
 > Forenklet hybrid π-modell og T-modell (NPN-transistor).
 
@@ -504,7 +505,7 @@ forsterkningen *mindre*. Differensialforsterkeren sammenligner det
 gir utgangstransistorene det signalet de trenger for å *summa
 summarum* produsere en nær lineær forsterkning.
 
-![](https://raw.github.com/epsil/p3a/master/fig/flyt.png)
+![](fig/flyt.png)
 
 For å finne forsterkningen med tilbakekobling må vi først finne
 forsterkningen *uten* tilbakekobling, dvs. råforsterkningen. Det betyr
@@ -522,7 +523,7 @@ trinn med utgangspunkt i inngangsimpedansen til senere trinn.
 > forsterke det i den ordinære betydningen, betraktes altså også som
 > en «forsterkning».
 
-![](https://raw.github.com/epsil/p3a/master/fig/p3a.png)
+![](fig/p3a.png)
 
 Det opprinnelige kretsskjemaet for forsterken, etter Rod Elliott.
 Komponenter markert med `*` er utelatt fra kretskortet.
@@ -539,7 +540,7 @@ transistor med strømforsterkning lik produktet av strømforsterkningene
 til `Q_7` og `Q_5` (noe som vil vises under), og det er dermed rimelig
 å regne også `Q_5` som en del av dette trinnet.
 
-![](https://raw.github.com/epsil/p3a/master/fig/p3a-f1.png)
+![](fig/p3a-f1.png)
 
 Strømmen avhenger av utgangslasten (dvs. impedansverdien til
 høyttaleren), som vi kaller `R_L`, og som typisk er på 8 Ω. Verdien er
@@ -558,7 +559,7 @@ mens basestrømmen til `Q_7` kaller vi `i_b7`, osv. Dette
 navngivningssystemet følger vi konsekvent i hele analysen for å skille
 kretsens mange størrelser fra hverandre.
 
-![](https://raw.github.com/epsil/p3a/master/fig/sziklai.png)
+![](fig/sziklai.png)
 
 Vi tar utgangspunkt i `i_b5`, som vi betrakter som trinnets
 inngangsstrøm - og basespenningen til `Q_5`, `v_b5`, er tilsvarende
@@ -663,7 +664,7 @@ analysen av klasse A-driveren (transistoren `Q_4`). Det ene er
 inngangsimpedansen til utgangstransistortrinnet, `R_iu`. Det andre er
 nevnte trinns forsterkning, `A_u`.
 
-![](https://raw.github.com/epsil/p3a/master/fig/p3a-f2.png)
+![](fig/p3a-f2.png)
 
 `Q_4` er koblet til en `v_BE`-multiplikator som sørger for en konstant
 DC-spenning mellom `Q_5` og `Q_6`, og som utgjøres av transistoren
@@ -674,7 +675,7 @@ koblet til en parallellkobling av `Q_5`, `Q_6` og
 *bootstrap*-motstanden `R_9`. Vi ser bort fra kondensatoren `C_4`, som
 er en koblingskondensator som fjerner «parasitt»-oscillasjoner.
 
-![](https://raw.github.com/epsil/p3a/master/fig/driver.png)
+![](fig/driver.png)
 
 Når vi skal finne utgangslasten til klasse A-driveren, er
 inngangsimpedansen til `Q_5` (så vel som `Q_6`) gitt ved `R_iu`.
@@ -685,7 +686,7 @@ den *nedre* terminalen er `v_o`, som er gitt ved `v_o = A_u v_b5`.
 Spenningsfallet over motstanden er differansen mellom disse to
 potensialene, og vi får at `v_R9 = v_b5 - v_o = v_b5 - A_u v_b5`.
 
-> ![](https://raw.github.com/epsil/p3a/master/fig/bootstrap.png)
+> ![](fig/bootstrap.png)
 >
 > Skjematisk fremstilling av bootstrap-koblingen.
 
@@ -741,8 +742,8 @@ inngangsspenningen, `v_b4`, gitt ved
 
 ### Differensialforsterkeren
 
-> ![](https://raw.github.com/epsil/p3a/master/fig/diff1.png)
-> ![](https://raw.github.com/epsil/p3a/master/fig/diff2.png)
+> ![](fig/diff1.png)
+> ![](fig/diff2.png)
 >
 > Differensialforsterkeren konseptualisert som en operasjonsforsterker.
 >
@@ -756,7 +757,7 @@ sammen med lysdioden, `D_1`, en *strømkilde*. I et småsignalskjema
 erstattes strømkilder med brudd, og dermed kan vi eliminere `Q_3` fra
 analysen.
 
-![](https://raw.github.com/epsil/p3a/master/fig/p3a-f3.png)
+![](fig/p3a-f3.png)
 
 *Basen til `Q_1`* er differensialforsterkerens ene inngang. *Basen til
 `Q_2`* er dens andre inngang. *Kollektoren til `Q_1`* er utgangen.\*
@@ -770,8 +771,8 @@ T-modeller.
 > jordet, så utgangsspenningen kan sies å utgjøres av
 > spenningspotensialet til kollektoren til `Q_1` alene.
 
-![](https://raw.github.com/epsil/p3a/master/fig/p3a-f4.png)
-![](https://raw.github.com/epsil/p3a/master/fig/ltp.png)
+![](fig/p3a-f4.png)
+![](fig/ltp.png)
 
 Fordi emitterne er koblet sammen og `Q_3` faller bort, går den samme
 signalstrømmen gjennom emittermotstandene til `Q_1` og `Q_2`, som er
@@ -805,8 +806,8 @@ parallell - motstanden `R_6` og transistoren `Q_4`. For å finne
 spenningsfallet mot jord erstatter vi `Q_4` med en forenklet hybrid
 π-modell, slik at vi får basemotstanden `r_π4` i parallell med `R_6`.
 
-![](https://raw.github.com/epsil/p3a/master/fig/p3a-f5.png)
-![](https://raw.github.com/epsil/p3a/master/fig/q4.png)
+![](fig/p3a-f5.png)
+![](fig/q4.png)
 
 Skjemaet viser at vi også får kondensatoren `C_4` i parallell med
 `r_π4`. Men vi ser bort fra `C_4` og betrakter parallellkoblingen av
@@ -827,7 +828,7 @@ differensialforsterkeren, som vi kan kalle `A_d`, blir da
 
 ### Inngangen
 
-![](https://raw.github.com/epsil/p3a/master/fig/p3a-f6.png)
+![](fig/p3a-f6.png)
 
 Mellom differensialforsterkeren og inngangen er det plassert noen
 kondensatorer og motstander som filtrerer bort DC-spenning og støy,
@@ -870,7 +871,7 @@ der `R_p = R_2 (R_3 + R_Li) / (R_2 + R_3 + R_Li)`.
 
 ### Tilbakekoblingen
 
-![](https://raw.github.com/epsil/p3a/master/fig/p3a-f7.png)
+![](fig/p3a-f7.png)
 
 Selve tilbakekoblingen er en enkel spenningsdeler inn på basen til
 `Q_2` (kondensatoren `C_3` ignoreres). Vi går fra høyre til venstre,
@@ -1075,7 +1076,7 @@ videre gjennom en likeretterbro. Der foregår omformingen fra AC til
 DC. Til slutt har vi fire 10 mF glattekondensatorer som reduserer
 rippelspenningen.
 
-![](https://raw.github.com/epsil/p3a/master/fig/stromf.png)
+![](fig/stromf.png)
 
 For å oppnå en effekt på 2 × 60 W i 8 Ω trenger vi en
 spenningsforsyning på
@@ -1107,14 +1108,14 @@ Vi trenger dermed en forsyning på
 
 Vi ser at en trafo på 300 VA oppfyller kravet.
 
-> ![](https://raw.github.com/epsil/p3a/master/fig/skopbilde1.png)
-> ![](https://raw.github.com/epsil/p3a/master/fig/skopbilde2.png)
+> ![](fig/skopbilde1.png)
+> ![](fig/skopbilde2.png)
 >
 > Skopbilder fra glattekondensatorene (venstre) og utgangen (høyre)
 > med forsterkeren på tomgang og 29-0-24 V trafo.
 >
-> ![](https://raw.github.com/epsil/p3a/master/fig/skopbilde3.png)
-> ![](https://raw.github.com/epsil/p3a/master/fig/skopbilde4.png)
+> ![](fig/skopbilde3.png)
+> ![](fig/skopbilde4.png)
 >
 > Skopbilder fra glattekondensatorene (venstre) og utgangen (høyre)
 > med forsterkeren på tomgang og 24-0-24 V trafo.
@@ -1141,18 +1142,18 @@ Konstruksjon
 Kabinettet
 ----------
 
-> ![](https://raw.github.com/epsil/p3a/master/fig/topp.jpg)
-> ![](https://raw.github.com/epsil/p3a/master/fig/bunn.jpg)
+> ![](fig/topp.jpg)
+> ![](fig/bunn.jpg)
 >
 > Topp. Bunn.
 >
-> ![](https://raw.github.com/epsil/p3a/master/fig/front.jpg)
-> ![](https://raw.github.com/epsil/p3a/master/fig/bak.jpg)
+> ![](fig/front.jpg)
+> ![](fig/bak.jpg)
 >
 > Front. Bak.
 >
-> ![](https://raw.github.com/epsil/p3a/master/fig/side.jpg)
-> ![](https://raw.github.com/epsil/p3a/master/fig/perspektiv.jpg)
+> ![](fig/side.jpg)
+> ![](fig/perspektiv.jpg)
 >
 > Side. Perspektiv.
 
@@ -1168,7 +1169,7 @@ kabinettet skrus sammen igjen.
 Innsiden
 --------
 
-![](https://raw.github.com/epsil/p3a/master/fig/innside.jpg)
+![](fig/innside.jpg)
 
 *1.* Strøminngang. *2.* Hovedsikring. *3.* Transformator. *4.*
 Jordingspunkt (stjernejord). *5.* Brolikeretter. *6.* Glattefilter
@@ -1179,12 +1180,12 @@ Jordingspunkt (stjernejord). *5.* Brolikeretter. *6.* Glattefilter
 
 ### Ledninger
 
-![](https://raw.github.com/epsil/p3a/master/fig/ledninger.jpg)
+![](fig/ledninger.jpg)
 
 Gulgrønne ledninger går til jord. Ledninger merket med gulgrønn
 elektrikertape er også jordledninger.
 
-![](https://raw.github.com/epsil/p3a/master/fig/stjernejord.jpg)
+![](fig/stjernejord.jpg)
 
 For å unngå støy har forsterkeren ett jordingspunkt - stjernejord. Det
 befinner seg i nærheten av transformatoren og kan demonteres ved å
@@ -1192,14 +1193,14 @@ skru ut skruen som holder kablene sammen.
 
 ### Strømforsyningen
 
-![](https://raw.github.com/epsil/p3a/master/fig/stromfbilde.jpg)
+![](fig/stromfbilde.jpg)
 
 Strømforsyningen omfatter en strøminngang, en hovedsikring, en
 transformator, en brolikeretter, et glattefilter og en av/på-knapp.
 
-> ![](https://raw.github.com/epsil/p3a/master/fig/strominngang.jpg)
-> ![](https://raw.github.com/epsil/p3a/master/fig/sikring.jpg)
-> ![](https://raw.github.com/epsil/p3a/master/fig/knapp.jpg)
+> ![](fig/strominngang.jpg)
+> ![](fig/sikring.jpg)
+> ![](fig/knapp.jpg)
 >
 > Strøminngang. Hovedsikring. Av/på-knapp.
 
@@ -1209,9 +1210,9 @@ kabinettet. Av/på-knappen, som fungerer som et brudd når den er av og
 leder strøm når den er på, er ikke festet med skruer, men er klemt på
 plass. Koblingspunktene er isolert med tape.
 
-> ![](https://raw.github.com/epsil/p3a/master/fig/trafo.jpg)
-> ![](https://raw.github.com/epsil/p3a/master/fig/brolikeretter.jpg)
-> ![](https://raw.github.com/epsil/p3a/master/fig/glattek.jpg)
+> ![](fig/trafo.jpg)
+> ![](fig/brolikeretter.jpg)
+> ![](fig/glattek.jpg)
 >
 > Transformator. Brolikeretter. Glattekondensatorer.
 
@@ -1222,7 +1223,7 @@ til kabinettet med en holder fra oversiden og en skrue fra undersiden.
 
 ### Lysdiode
 
-> ![](https://raw.github.com/epsil/p3a/master/fig/redled.png)
+> ![](fig/redled.png)
 >
 > Dioden er koblet i serie med tre motstander for å gi riktig strøm.
 
@@ -1233,24 +1234,24 @@ slukne når forsterkeren slås av ettersom utladningen tar litt tid. Det
 er imidlertid slett ikke noen ulempe med en pålitelig indikator på
 glattefilterets spenningsstatus (se under).
 
-> ![](https://raw.github.com/epsil/p3a/master/fig/diode.jpg)
-> ![](https://raw.github.com/epsil/p3a/master/fig/diodetape.jpg)
+> ![](fig/diode.jpg)
+> ![](fig/diodetape.jpg)
 >
 > Venstre: Dioden forfra. Høyre: Diodekretsen er festet til
 > kabinettet med tape.
 
 ### Innganger og utganger
 
-> ![](https://raw.github.com/epsil/p3a/master/fig/inng.jpg)
-> ![](https://raw.github.com/epsil/p3a/master/fig/inngbak.jpg)
+> ![](fig/inng.jpg)
+> ![](fig/inngbak.jpg)
 >
 > Inngangene utenfra. Inngangene innenfra.
 
 Inngangene er festet til kabinettet med to skruer utenfra. De har
 felles jord.
 
-> ![](https://raw.github.com/epsil/p3a/master/fig/utg.jpg)
-> ![](https://raw.github.com/epsil/p3a/master/fig/utgbak.jpg)
+> ![](fig/utg.jpg)
+> ![](fig/utgbak.jpg)
 >
 > Utgangene utenfra. Utgangene innenfra.
 
@@ -1269,8 +1270,8 @@ høyttalerne kan vernes ved å montere et DC-vern på utgangstrinnet.)
 
 ### Volumkontroll
 
-> ![](https://raw.github.com/epsil/p3a/master/fig/volumknott.jpg)
-> ![](https://raw.github.com/epsil/p3a/master/fig/volumpot.jpg)
+> ![](fig/volumknott.jpg)
+> ![](fig/volumpot.jpg)
 >
 > Volumkontrollen. Volumpotensiometeret.
 
@@ -1284,7 +1285,7 @@ mellom dem som bestemmes ved å skru på volumkontrollen. Hvert
 potensiometer har tre terminaler: utgangssignalet tas ut fra den
 midterste, mens de to andre kobles til inngangssignalet og jord.
 
-> ![](https://raw.github.com/epsil/p3a/master/fig/potmeter.png)
+> ![](fig/potmeter.png)
 >
 > Et potensiometer (a) kan betraktes som en enkel spenningsdeler over
 > to motstander (b). Når volumet er null, er `v_o` lik jord (c). Når
@@ -1292,8 +1293,8 @@ midterste, mens de to andre kobles til inngangssignalet og jord.
 
 ### Kjøleribben
 
-![](https://raw.github.com/epsil/p3a/master/fig/kjoleskrue1.jpg)
-![](https://raw.github.com/epsil/p3a/master/fig/kjoleskrue2.jpg)
+![](fig/kjoleskrue1.jpg)
+![](fig/kjoleskrue2.jpg)
 
 Kjøleribben er plassert mellom de to kretskortene og er festet til
 kabinettet med fire skruer fra oversiden. Hver skrue har fire muttere
@@ -1304,7 +1305,7 @@ hull i kjøleribben.
 Utgangstransistorene er festet til kjøleribben med skruer fra
 undersiden. Disse kan nås gjennom hull i kabinettet.
 
-![](https://raw.github.com/epsil/p3a/master/fig/transhull.jpg)
+![](fig/transhull.jpg)
 
 **Ikke løft opp kjøleribben uten å ha skrudd kretskortene fra
 kabinettet eller utgangstransistorene fra kjøleribben.**
@@ -1312,7 +1313,7 @@ kabinettet eller utgangstransistorene fra kjøleribben.**
 Kretskort
 =========
 
-> ![](https://raw.github.com/epsil/p3a/master/fig/kort.jpg)
+> ![](fig/kort.jpg)
 >
 > Hvert kretskort er festet til kabinettet med to skruer, her markert
 > med piler.
@@ -1329,11 +1330,11 @@ som viser hvor komponentene skal stå («silk screen»).
 **Advarsel: Det er avvik mellom overlegget og komponentplasseringen.
 Ved reparasjon på kortet *må* man først lese denne teksten.**
 
-![](https://raw.github.com/epsil/p3a/master/fig/copperb.png)
+![](fig/copperb.png)
 
 Kobberbunn.
 
-![](https://raw.github.com/epsil/p3a/master/fig/silkscreen.png)
+![](fig/silkscreen.png)
 
 «Silk screen». Kobberbanene er vist i grått.
 
@@ -1373,7 +1374,7 @@ Modifikasjoner
 Kretsen er noe modifisert for å fungere optimalt. Modifisert
 kretsskjema.
 
-![](https://raw.github.com/epsil/p3a/master/fig/kretsmod.png)
+![](fig/kretsmod.png)
 
 
 Pga. problemer med støy (1 MHz) koblet vi 368 pF kondensatorer i
@@ -1381,13 +1382,13 @@ parallell med `C_4` og `C_6`, for å øke kapasitansen. De ekstra
 kondensatorene er loddet fast til benene til transistorene `Q_4` og
 `Q_6` (se bilde).
 
-![](https://raw.github.com/epsil/p3a/master/fig/ekstrac.jpg)
+![](fig/ekstrac.jpg)
 
 Videre er `C_+` og `C_-` parallellkoblet med 100 nF kondensatorer på
 motsatt side av sikringene (`F_1` og `F_2`). Disse er festet på
 undersiden av kortet.
 
-> ![](https://raw.github.com/epsil/p3a/master/fig/termisk.jpg)
+> ![](fig/termisk.jpg)
 >
 > Termisk tilbakekobling av `Q_9`.
 
@@ -1436,7 +1437,7 @@ gjør det med en *ekstern* spenningskilde med strømbegrensning. Ved
 feil kan en ekstern kilde kuttes, mens den interne strømforsyningen
 har ingen slik sikkerhet pga. glattekondensatorene.
 
-![](https://raw.github.com/epsil/p3a/master/fig/vr1.jpg)
+![](fig/vr1.jpg)
 
 Hvilestrømmen (`I_Q`) stilles inn med potensiometeret `VR_1`. Skru
 det til full motstand (med klokken) og følg med på spenningen over
@@ -1599,8 +1600,8 @@ Temperaturutviklingen i transistorene ble lavere ettersom de dyre
 transistorene har en større flate og dermed overfører temperaturen
 bedre til kjøleribben.
 
-> ![](https://raw.github.com/epsil/p3a/master/fig/bd91x.png)
-> ![](https://raw.github.com/epsil/p3a/master/fig/mjl3.png)
+> ![](fig/bd91x.png)
+> ![](fig/mjl3.png)
 >
 > Kvalitet koster: BD911 (venstre) kontra MJL3281A (høyre).
 
