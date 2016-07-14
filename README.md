@@ -72,7 +72,7 @@ De oppgitte spesifikasjonene til forsterkeren er som følger:
 
 |                       |                        |
 | --------------------- | ---------------------- |
-| Effekt:*              | Ca. 2 × 60 W (8 Ω)     |
+| Effekt:[^1]           | Ca. 2 × 60 W (8 Ω)     |
 | Strømforsterkning:    | 27 dB                  |
 | Inngangsimpedans:     | 24,2 kΩ                |
 | Inngangssensitivitet: | 1,22 V for 100 W (8 Ω) |
@@ -80,7 +80,7 @@ De oppgitte spesifikasjonene til forsterkeren er som følger:
 | Klirr:                | 0,04 %, 1--80 W        |
 | DC offset:            | <100 mV                |
 
-> \* Avhenger av transformator.
+[^1]: Avhenger av transformator.
 
 Forsterkeren er en *klasse AB-forsterker*, altså en blanding av en
 klasse A-forsterker og en klasse B-forsterker. For små signaler
@@ -92,7 +92,7 @@ forsterkeren som en klasse B-forsterker, og utgangstransistorene
 bytter på å forsterke positive deler av signalet og negative.
 Forsterkeren bruker negativ tilbakekobling for å oppnå linearitet for
 høye strømmer og spenninger. (For en detaljert gjennomgang av kretsens
-oppbygning og virkemåte, se kretsanalysen.)
+oppbygning og virkemåte, se [kretsanalysen](#analyse).)
 
 Simulering
 ----------
@@ -104,8 +104,9 @@ Simulering
 Bode-diagrammet viser at forsterkeres maksimale båndbredde ligger fra
 1/2 Hz til ca. 500 kHz. Den originale kretsen ville normalt gått mye
 høyere, men siden vi har *modifisert* kretsen noe ved å koble 368 pF
-kondensatorer i parallell med $C_4$ og $C_6$ (se modifikasjonene for
-detaljer), blir de flaskehalsen i kretsen.
+kondensatorer i parallell med $C_4$ og $C_6$ (se
+[modifikasjonene](#modifikasjoner) for detaljer), blir de flaskehalsen
+i kretsen.
 
 ![](fig/magnitude20-20kHz.png)
 
@@ -177,8 +178,8 @@ $$R_o = \frac{\overline{v_o} -
   = \frac{834,03\text{ mV} -
     831,49\text{ mV}}{831,49\text{ mV}} = 0,003\text{ $\Omega$}$$
 
-På grunn av forsterkerens negative tilbakekobling blir
-utgangsimpedansen mindre enn den ellers ville ha vært.
+På grunn av forsterkerens negative [tilbakekobling](#tilbakekobling)
+blir utgangsimpedansen mindre enn den ellers ville ha vært.
 
 ### Dempningsfaktor
 
@@ -263,16 +264,17 @@ $$I_{\mathrm{dB}_{\mathrm{maks}}} = I_{\mathrm{sens}} -
 
 hvor vi ser bort fra akustikk i vegger.
 
-Kretsskjema
+Kretsskjema {#kretsskjema}
 ===========
 
-![](fig/kretsskjema.png)
+> ![](fig/kretsskjema.png)
+>
+> Kretsskjema fra Multisim. For det opprinnelige kretsskjemaet til Rod
+> Elliott, se [kretsanalysen](#analyse). For et modifisert skjema som
+> viser hvordan kretsen ble etter egne justeringer, se
+> [modifikasjonene](#modifikasjoner).
 
-Kretsskjema fra Multisim. For det opprinnelige kretsskjemaet til Rod
-Elliott, se kretsanalysen. For et modifisert skjema som viser hvordan
-kretsen ble etter egne justeringer, se modifikasjonene.
-
-Kretsanalyse
+Kretsanalyse {#analyse}
 ============
 
 Grunnleggende begreper
@@ -318,32 +320,32 @@ transistortypen.
 For å forspenne en NPN-transistor i det aktive området må
 base--emitter-spenningen være rundt 0,7 V, dvs. basespenningen må
 ligge ca. 0,7 V *over* emitterspenningen (eller *under* for en
-PNP-transistor).\* Dessuten må kollektorspenningen ikke ligge mer enn
-ca. 0,4 V *under* basespenningen (eller *over* for en PNP-transistor);
-vanligvis ligger kollektorspenningen godt over (eller under)
-basespenningen, som på figuren.
+PNP-transistor).[^2] Dessuten må kollektorspenningen ikke ligge mer
+enn ca. 0,4 V *under* basespenningen (eller *over* for en
+PNP-transistor); vanligvis ligger kollektorspenningen godt over (eller
+under) basespenningen, som på figuren.
 
-> \* Vi kan ikke snakke om «spenningen i et punkt» i kretsen på samme
-> måte som vi snakker om strømmen i punktet (strømgjennomgangen målt i
-> coulomb per sekund eller ampere), for spenning er alltid *over en
-> strekning*, dvs. mellom to ytterpunkter. Når vi f.eks. sier at
-> «kollektorspenningen er 12 V», mener vi alltid at kollektorutgangens
-> *spenningspotensial i forhold til jord* er 12 V (hvor jord er
-> nullpotensialet, 0 V); eller med andre ord, spenningen over
-> strekningen fra kollektorutgangen til jord er 12 V (dersom det er
-> flere slike strekninger, spiller det ingen rolle hvilken man
-> betrakter ettersom spenningen er den samme over alle grener i en
-> parallellkobling). At spenningen i et punkt ligger «over» spenningen
-> i et annet, er å forstå som at det første punktets
-> spenningspotensial i forhold til jord er større enn det andres. I
-> denne rapporten bruker vi om hverandre uttrykksmåter som
-> «basespenningen» (baseutgangens spenningspotensial i forhold til
-> jord, dvs. spenningen over strekningen fra basen til jord),
-> «base--emitter-spenningen» (spenningen over strekningen fra basen
-> til emitteren, eller *mer presist*, baseutgangens spenningspotensial
-> i forhold til jord minus emitterutgangens spenningspotensial i
-> forhold til jord) og «spenningsfallet over motstanden» (spenningen
-> over motstanden, dvs. mellom motstandens to terminaler).
+[^2]: Vi kan ikke snakke om «spenningen i et punkt» i kretsen på samme
+måte som vi snakker om strømmen i punktet (strømgjennomgangen målt i
+coulomb per sekund eller ampere), for spenning er alltid *over en
+strekning*, dvs. mellom to ytterpunkter. Når vi f.eks. sier at
+«kollektorspenningen er 12 V», mener vi alltid at kollektorutgangens
+*spenningspotensial i forhold til jord* er 12 V (hvor jord er
+nullpotensialet, 0 V); eller med andre ord, spenningen over
+strekningen fra kollektorutgangen til jord er 12 V (dersom det er
+flere slike strekninger, spiller det ingen rolle hvilken man betrakter
+ettersom spenningen er den samme over alle grener i en
+parallellkobling). At spenningen i et punkt ligger «over» spenningen i
+et annet, er å forstå som at det første punktets spenningspotensial i
+forhold til jord er større enn det andres. I denne rapporten bruker vi
+om hverandre uttrykksmåter som «basespenningen» (baseutgangens
+spenningspotensial i forhold til jord, dvs. spenningen over
+strekningen fra basen til jord), «base--emitter-spenningen»
+(spenningen over strekningen fra basen til emitteren, eller *mer
+presist*, baseutgangens spenningspotensial i forhold til jord minus
+emitterutgangens spenningspotensial i forhold til jord) og
+«spenningsfallet over motstanden» (spenningen over motstanden, dvs.
+mellom motstandens to terminaler).
 
 ### Arbeidspunkt og småsignal
 
@@ -362,7 +364,7 @@ $$v_P = v_P'(V_+) + v_P''(V_-) + v_P'''(v_{\sim})$$
 
 hvor $v_P'(V_+)$ er spenningspotensialet i $P$ når $V_-$ og $v_{\sim}$
 erstattes med kortslutninger, $v_P''(V_-)$ er spenningspotensialet i
-$P$ når $V_+$ og $v_{\sim}$ erstattes med kortslutninger, osv.\* La
+$P$ når $V_+$ og $v_{\sim}$ erstattes med kortslutninger, osv.[^3] La
 oss gruppere enkeltbidragene i DC- og AC-bidrag:
 
 $$\begin{split}
@@ -380,8 +382,8 @@ Siden superposisjonsprinsippet gjelder for strømmer så vel som
 spenninger, kan alle strømmer og spenninger i kretsen deles opp i en
 arbeidspunktsdel og en småsignalsdel.
 
-> \* Det er vanlig å bare skrive $v_P'$, $v_P''$, osv. Her anfører vi
-> spenningskilden i parentes for å gjøre notasjonen tydeligere.
+[^3]: Det er vanlig å bare skrive $v_P'$, $v_P''$, osv. Her anfører vi
+spenningskilden i parentes for å gjøre notasjonen tydeligere.
 
 ### Småsignalmodeller
 
@@ -457,7 +459,7 @@ i_er_e$, finnes følgende sammenheng mellom $r_\pi$ og $r_e$:
 
 $$r_\pi = (\beta + 1)r_e$$
 
-Råforsterkning og tilbakekobling
+Råforsterkning og tilbakekobling {#tilbakekobling}
 --------------------------------
 
 En klasse AB-forsterker kombinerer egenskapene til en klasse
@@ -491,23 +493,23 @@ summarum* produsere en nær lineær forsterkning.
 For å finne forsterkningen med tilbakekobling må vi først finne
 forsterkningen *uten* tilbakekobling, dvs. råforsterkningen. Det betyr
 å følge signalets bane gjennom kretsen og, for hvert trinn i
-forsterkeren, beregne forsterkningen.\* Den totale råforsterkningen er
-dermed gitt som produktet av alle enkelttrinnforsterkningene. Fordi vi
-får behov for å beregne utgangslasten til hvert trinn, går vi gjennom
-kretsen *baklengs* -- fra utgangssignalet til inngangssignalet -- slik
-at vi kan uttrykke utgangslasten til tidligere trinn med utgangspunkt
-i inngangsimpedansen til senere trinn.
+forsterkeren, beregne forsterkningen.[^4] Den totale råforsterkningen
+er dermed gitt som produktet av alle enkelttrinnforsterkningene. Fordi
+vi får behov for å beregne utgangslasten til hvert trinn, går vi
+gjennom kretsen *baklengs* -- fra utgangssignalet til inngangssignalet
+-- slik at vi kan uttrykke utgangslasten til tidligere trinn med
+utgangspunkt i inngangsimpedansen til senere trinn.
 
-> \* Her bruker vi ordet «forsterkning» i en noe utvidet betydning,
-> dvs. som en multiplikator som godt kan være under 1. En verdi på
-> f.eks. 0,8, som effektivt vil *forminske* signalet snarere enn
-> forsterke det i den ordinære betydningen, betraktes altså også som
-> en «forsterkning».
+[^4]: Her bruker vi ordet «forsterkning» i en noe utvidet betydning,
+dvs. som en multiplikator som godt kan være under 1. En verdi på
+f.eks. 0,8, som effektivt vil *forminske* signalet snarere enn
+forsterke det i den ordinære betydningen, betraktes altså også som en
+«forsterkning».
 
-![](fig/p3a.png)
-
-Det opprinnelige kretsskjemaet for forsterken, etter Rod Elliott.
-Komponenter markert med $*$ er utelatt fra kretskortet.
+> ![](fig/p3a.png) {#elliot}
+>
+> Det opprinnelige kretsskjemaet for forsterken, etter Rod Elliott.
+> Komponenter markert med $*$ er utelatt fra kretskortet.
 
 ### Utgangstransistorene
 
@@ -736,16 +738,16 @@ strømkilder med brudd, og dermed kan vi eliminere $Q_3$ fra analysen.
 ![](fig/p3a-f3.png)
 
 *Basen til $Q_1$* er differensialforsterkerens ene inngang. *Basen til
-$Q_2$* er dens andre inngang. *Kollektoren til $Q_1$* er utgangen.\*
+$Q_2$* er dens andre inngang. *Kollektoren til $Q_1$* er utgangen.[^5]
 For å finne *differensialforsterkningen uten tilbakekobling* kobler vi
 basen til $Q_2$ til jord, og bytter så ut $Q_1$ og $Q_2$ med
 T-modeller.
 
-> \* En differensialforsterker har vanligvis *to* utganger s.a.
-> utgangsspenningen er gitt ved differansen mellom
-> spenningspotensialene. Her er imidlertid kollektoren til $Q_2$
-> jordet, så utgangsspenningen kan sies å utgjøres av
-> spenningspotensialet til kollektoren til $Q_1$ alene.
+[^5]: En differensialforsterker har vanligvis *to* utganger s.a.
+utgangsspenningen er gitt ved differansen mellom
+spenningspotensialene. Her er imidlertid kollektoren til $Q_2$ jordet,
+så utgangsspenningen kan sies å utgjøres av spenningspotensialet til
+kollektoren til $Q_1$ alene.
 
 ![](fig/p3a-f4.png)
 ![](fig/ltp.png)
@@ -762,17 +764,17 @@ $$i_{e1} = i_{e2} = \frac{v_{b1}}{2r_{e1}}$$
 Emitterstrømmen til $Q_1$ er relatert til kollektorstrømmen til $Q_1$
 med faktoren $\alpha$, som er tilnærmet lik $1$ ettersom disse
 strømmene er nesten identiske: $i_{c1} = \alpha i_{e1} \approx
-i_{e1}$.\* Når vi kjenner kollektorstrømmen til $Q_1$, kan vi beregne
-kollektorspenningen til $Q_1$ -- utgangsspenningen til
+i_{e1}$.[^6] Når vi kjenner kollektorstrømmen til $Q_1$, kan vi
+beregne kollektorspenningen til $Q_1$ -- utgangsspenningen til
 differensialforsterkeren -- ved å finne spenningsfallet fra
 kollektoren til jord (dvs. signaljord, jord i småsignalskjemaet).
 
-> \* $\alpha$ kan uttrykkes med $\beta$ slik:
->
-> $$\alpha = \frac{i_C}{i_E} = \frac{\beta i_B}{(\beta + 1)i_B}
->   = \frac{\beta}{\beta + 1}$$
->
-> som er tilnærmet lik $1$ ettersom $\beta \gg 1$.
+[^6]: $\alpha$ kan uttrykkes med $\beta$ slik:
+
+    $$\alpha = \frac{i_C}{i_E} = \frac{\beta i_B}{(\beta + 1)i_B}
+      = \frac{\beta}{\beta + 1}$$
+
+    som er tilnærmet lik $1$ ettersom $\beta \gg 1$.
 
 Imidlertid er kollektoren til $Q_1$ koblet til *to* komponenter i
 parallell -- motstanden $R_6$ og transistoren $Q_4$. For å finne
@@ -1040,7 +1042,7 @@ I desibel tilsvarer dette
 
 $$A_{\mathrm{dB}} = 20\lg{14} = 23\text{ dB}$$
 
-Strømforsyning
+Strømforsyning {#stromforsyning}
 ==============
 
 Strømmen kommer fra lysnettet og inn gjennom transformatoren. Den
@@ -1347,14 +1349,14 @@ korrekt. Vær oppmersom på følgende:
     og $C_-$ oppført som «`Cpluss`» og «`Cminus`», henholdsvis.)
 
 Dersom det er tvil om hvordan komponentene skal monteres, så konsulter
-kretsskjemaet.
+[kretsskjemaet](#kretsskjema).
 
-Modifikasjoner
+Modifikasjoner {#modifikasjoner}
 --------------
 
 Kretsen er noe modifisert for å fungere optimalt.
 
-> ![](fig/kretsmod.png)
+> ![](fig/kretsmod.png) {#mod}
 >
 > Modifisert kretsskjema.
 
@@ -1382,13 +1384,13 @@ Resistansen øker og strømgjennomgangen minker.) Dersom temperaturen
 blir kritisk, oppstår det en selvforsterkende utvikling hvor den økte
 strømmen øker temperaturen og omvendt, inntil transistoren brenner
 opp. Dette er kjent som *thermal runaway* -- transistorene «løper
-løpsk».\*
+løpsk».[^7]
 
-> \* Det kan legges til at vi ikke hadde noen problemer med
-> varmeutvikling i denne forsterkeren, hverken med eller uten termisk
-> tilbakekobling. Kjøleribben og utgangstransistorene ble bare varme
-> (men ikke faretruende varme) ved langvarig bruk på fullt volum.
-> Ingen komponenter brant opp under testingen av forsterkeren.
+[^7]: Det kan legges til at vi ikke hadde noen problemer med
+varmeutvikling i denne forsterkeren, hverken med eller uten termisk
+tilbakekobling. Kjøleribben og utgangstransistorene ble bare varme
+(men ikke faretruende varme) ved langvarig bruk på fullt volum. Ingen
+komponenter brant opp under testingen av forsterkeren.
 
 Termisk tilbakekobling tar sikte på å motvirke denne utviklingen ved å
 overføre noe av varmen som genereres av utgangstransistorene til
@@ -1410,7 +1412,7 @@ Ved å speilvende kretskortet vil man for øvrig kunne feste
 transistorene til kjøleribben på en annen måte -- oppå kjøleribben i
 stedet for under.
 
-Trimming
+Trimming {#trimming}
 --------
 
 Første gang man skal starte opp forsterkeren, anbefales det at man
@@ -1438,13 +1440,13 @@ svarer til et spenningsfall på 50 mV:
 > measure across the resistors should be set to 50 mV $\pm$ 5 mV. The
 > setting is not overly critical, but at lower currents, there is less
 > dissipation in the output transistors. Current is approximately 1.5
-> mA/mV, so 50 mV will represent 75 mA quiescent current.\*
+> mA/mV, so 50 mV will represent 75 mA quiescent current.[^8]
 
 Hvilestrømmen avgjør balansen mellom forsterkerens klasse A- og
 B-funksjonalitet. For lav hvilestrøm gir overgangsforvrengning.
 
-> \* Fra <http://sound.westhost.com/project3a.htm>.
-> Gjengitt her med typografiske justeringer.
+[^8]: Fra <http://sound.westhost.com/project3a.htm>. Gjengitt her med
+typografiske justeringer.
 
 Komponentliste
 ==============
@@ -1480,20 +1482,20 @@ Komponentliste
 
 ### Halvledere
 
-| Komponent                  | Type          |
-| -------------------------- | ------------- |
-| $Q_1$, $Q_2$, $Q_3$, $Q_9$ | BC546         |
-| $Q_7$                      | MJL1302A      |
-| $Q_4$, $Q_6$               | BD140         |
-| $Q_8$                      | MJL3281A      |
-| $Q_5$                      | BD139         |
-| $D_1$                      | LED (grønn)\* |
-| Rød lysdiode               |               |
+| Komponent                  | Type            |
+| -------------------------- | --------------- |
+| $Q_1$, $Q_2$, $Q_3$, $Q_9$ | BC546           |
+| $Q_7$                      | MJL1302A        |
+| $Q_4$, $Q_6$               | BD140           |
+| $Q_8$                      | MJL3281A        |
+| $Q_5$                      | BD139           |
+| $D_1$                      | LED (grønn)[^9] |
+| Rød lysdiode               |                 |
 
-> \* Merk at fargen på lysdioden er avgjørende. Som Rod Elliott sier
-> det: «This is not for appearance (although the green LED looks
-> pretty neat on the board), but for the voltage drop -- different
-> coloured LEDs have a slightly different voltage drop.»
+[^9]: Merk at fargen på lysdioden er avgjørende. Som Rod Elliott sier
+det: «This is not for appearance (although the green LED looks pretty
+neat on the board), but for the voltage drop -- different coloured
+LEDs have a slightly different voltage drop.»
 
 ### Annet
 
